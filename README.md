@@ -25,5 +25,5 @@ Code:
 
 ``model.py``: PyTorch model, in the future we may want to do some cool custom things in here, thus no huggingface ``Trainer(...)`` object.
 
-``notes.txt``: Some inconsistent annotations in the dataset (I assume there is many more, and some could be fixed with possibly gazzeteers + translation)
+``notes.txt``: Some inconsistent annotations in the dataset (I assume there is many more)
 
