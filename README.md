@@ -10,7 +10,7 @@ Optional:
 * args.py: set ``bpe_as_beginning`` to ``False`` if all bpe-tokens of the first word of the NE should get the B-[type]
 * args.py: set ``do_test`` to ``False`` to not run the model on the test data
 * args.py: set ``model_card`` to try another model! Should work with most (``add_prefix_space`` may have to be changed in the tokenizer for some models)
-* main.py: ln 72: set ``eval_bi`` to ``False`` to collapse labels (B-Pers, I-Pers) -> (Pers, Pers) during evaluation (i.e. we still train with B-/I-).
+* main.py: ln 72: set ``eval_bi`` to ``False`` to collapse labels (B-Pers, I-Pers) -> (Pers, Pers) during evaluation (i.e. we still train with B-/I-). Should be made into an argument, but was a last-minute addition.
 
 
 # Project Structure
