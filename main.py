@@ -49,8 +49,6 @@ def main():
         model = NERClassifier(base_model, len(idx2lbl_map))
     else:
         model = torch.load(f'models/system-{args.system}')
-        #model = AutoModel.from_pretrained(args.model_card, output_hidden_states = True)
-        #model.load_state_dict(torch.load(f'models/system-{args.system}.pt'))
     
     tokenizer = AutoTokenizer.from_pretrained(args.model_card, add_prefix_space=True)
     model.to(device)
@@ -60,18 +58,15 @@ def main():
     logging_step = 0
     for e in range(args.epochs):
         if args.save_or_load == 'save':
-            #print(f'### EPOCH {e} ###')
             model.train()
             model, logging_step = train(model, tokenizer, opt, 
                                         dataset['train'], lbl2idx_map,
                                         logging_step, desc=f'Epoch {e}')
     
         model.eval()
-        #print('### VALIDATION SPLIT ###')
-        #eval_model(model, tokenizer, dataset['dev'], lbl2idx_map, idx2lbl_map, desc='Dev')
+        eval_model(model, tokenizer, dataset['dev'], lbl2idx_map, idx2lbl_map, desc='Dev')
         
     if args.do_test:
-        #print('### TEST SPLIT ###')
         eval_model(model, tokenizer, dataset['test'], 
                     lbl2idx_map, idx2lbl_map, 
                     eval_bi=True, produce_report=True)
@@ -108,8 +103,6 @@ def train(model, tokenizer, opt, dataset, lbl2idx_map, logging_step, desc='Train
         opt.zero_grad()
         
         logging_step += 1
-        # if logging_step == 1000:
-        #     break
     
     if args.save_or_load == 'save':
         torch.save(model, f'models/system-{args.system}')
