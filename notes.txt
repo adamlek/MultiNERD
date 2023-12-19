@@ -1,0 +1,58 @@
+Bad/inconsistent annotations (there should be many more of them, but from a quick inspection these were found):
+
+[('Dietary', 'O'),
+ ('selenium', 'O'),
+ ('comes', 'O'),
+ ('from', 'O'),
+ ('nuts', 'O'), # should be a food?
+ (',', 'O'),
+ ('cereals', 'O'), # should be a food?
+ (',', 'O'),
+ ('meat', 'B-FOOD'),
+ (',', 'O'),
+ ('mushrooms', 'O'), # should be a food?
+ (',', 'O'),
+ ('fish', 'B-ANIM'),
+ (',', 'O'),
+ ('and', 'O'),
+ ('eggs', 'O'), # should be a food?
+ ('.', 'O')]
+
+ [('Seasonings', 'O'),
+ ('that', 'O'),
+ ('appear', 'O'),
+ ('in', 'O'),
+ ('most', 'O'),
+ ('of', 'O'),
+ ('these', 'O'),
+ ('recipes', 'O'),
+ ('include', 'O'),
+ ('onions', 'O'), # should be a food?
+ (',', 'O'),
+ ('wine', 'O'), # should be a food?
+ ('vinegar', 'O'), # should be a food?
+ (',', 'O'),
+ ('lemon', 'B-PLANT'), # should be a food?
+ ('or', 'O'),
+ ('lime', 'B-FOOD'), # should be a food?
+ ('juice', 'O'),
+ (',', 'O'),
+ ('verjuice', 'B-FOOD'), # should be a food?
+ (',', 'O'),
+ ('sorrel', 'B-FOOD'), # should be a food?
+ (',', 'O'),
+ ('sugar', 'O'), # should be a food?
+ (',', 'O'),
+ ('raisins', 'O'), # should be a food?
+ (',', 'O'),
+ ('black', 'O'), # should be a B-food?
+ ('pepper', 'O'), # should be a I-food?
+ (',', 'O'),
+ ('cinnamon', 'B-PLANT'),
+ (',', 'O'),
+ ('nutmeg', 'O'), # should be a food?
+ (',', 'O'),
+ ('cloves', 'O'), # should be a food?
+ ('and', 'O'),
+ ('cumin', 'B-PLANT'),
+ ('.', 'O')]
