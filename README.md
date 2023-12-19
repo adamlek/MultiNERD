@@ -1,6 +1,18 @@
 # MultiNERD
 Simple system for the English portion of the MultiNERD dataset.
 
+How to train:
+* args.py: Set ``system`` = ``A`` or ``B``
+* args.py: Set ``load_or_save`` to ``save`` to train a new model, or ``load`` to test the trained model
+* run ``python3 main.py``. Takes about 17min/epoch on a 12gb card.
+
+Optional:
+* args.py: set ``bpe_as_beginning`` to ``False`` if all bpe-tokens of the first word of the NE should get the B-[type]
+* args.py: set ``do_test`` to ``False`` to not run the model on the test data
+* args.py: set ``model_card`` to try another model! Should work with most (``add_prefix_space`` may have to be changed in the tokenizer for some models)
+* main.py: ln 72: set ``eval_bi`` to ``False`` to collapse labels (B-Pers, I-Pers) -> (Pers, Pers) during evaluation (i.e. we still train with B-/I-).
+
+
 # Project Structure
 
 Folders:
