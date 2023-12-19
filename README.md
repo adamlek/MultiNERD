@@ -17,7 +17,7 @@ Optional:
 
 Folders:
 
-``data/``: Data files downloaded from the projects website (alternatively with huggingface ``datasets`` ``dataset = load_dataset_builder('data_card').filter(...)`` to get the English data).
+``data/``: Data files downloaded from the MultiNERD project website (alternatively with huggingface ``datasets`` ``dataset = load_dataset_builder('data_card').filter(...)`` to get the English data).
 
 ``figs/``: Figures for evaluation.
 
